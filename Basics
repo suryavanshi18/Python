@@ -1,0 +1,52 @@
+Dimension->contain qualitive values, categorize data
+Measures->Contain numeric ,aggregate->sum
+Dimensions(blue) and measures(green) come under role
+Discrete represented as blue, continuous as green
+Types of filter->extract, data source, context, dimensions, measures, calculation filter
+Join vs blending->Combining data from 2 or more sources(oracle, sql) is called data blending, each data source has its own set of dimensions,  measures
+Combining data between 2 or more tables/sheets within same data source is called data joining.
+Live vs extract->in live conn offer the convenience of real time updates with any changes in data source reflected in Tableau.Extract are snapshots that are loaded into system memory to be quickly called for visualization
+Extract is faster as it doesn’t need to access the db
+Calculated field->avg(datediff(‘day’,[m1],[m2]))
+Top 5 and last 5->Can be made using set   Dimension->create->set
+Set vs group->group is one D,used to create high level category by using lower category
+Tableau sets can have conditions and can be grouped across multiple dimensions
+Groups can’t be used in calculated field but sets can
+Parameter->dynamic values that can replace constant values in calculations,filters
+Parameter->right click->show parameter control
+Twbx->tableau packaged workbook (Package of files compressed together),contains datasource also
+Twb->xml contains instructionto interact with data source,can’t be shared alone
+Workbook->contains sheet,worksheet,story,dashboard
+Worksheet->contains single view along with shelves.legends,data pane
+Dashboard->collection of multiple worksheets
+Story->contains sequence of worksheets
+Blended axis->2 measures that  have same axes,have the same scale and axis
+Dualaxes-> 2different scales,allows you to compare measures,
+Left(3,”Tableau”)->error
+Left(“Tableau”,3)->Tab
+How to handle Null values->Tableau cannot plot them->filter data,show data at default location in axis
+Measures->add table calculation->rank
+Calculated field->sum([Profit])/sum([sales])
+Rank->rank(sum([Sales]))
+Dashboard Action->url action
+Objects->url
+To show aggregated sales across range of products->tree map
+Show activities of events->gantt chart
+Quarter wise profit growth->waterfall chart
+Null values on map->edit location,filter data,show data at default location
+Lod->level of detail ->exclude,include,fixed
+{exclude[sub-category]:sum([sales])}
+Profit per day->{fixed[order date]:sum([profit])}
+IF [LOD-PROFIT PER DAY]>2000 then “Highly Profitabe”
+ELSEIF [LOD-PROFIT PER DAY]<=0 then “Unprofitable”
+ELSE “Profitable”
+END
+Schedule a workbook in tableau after publishing it->tableau server->content->data sources->select check box for data source->actions->extract refresh->schedule refresh
+Zn->returns if it is not null otherwise zero
+Find->string,substring
+Datediff(‘day’,start,end)
+Create parameter->sales/profit
+Create calculation->case [sales/profit]
+		When “sales” then [Sales]
+		When “profit” then [Profit]
+		end
