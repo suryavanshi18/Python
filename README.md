@@ -1,1 +1,1 @@
-Hangman is a popular game in which you need to guess the word correctly within a limited attempt allowed for a user. I have implemented this game by following the video tutorial->https://www.youtube.com/watch?v=cJJTnI22IF8
+This repo contains my learning in Python
