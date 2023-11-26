@@ -1,1 +1,3 @@
-This repo contains my learning in Python and Data Science
+Deep learning and Pandas basics
+Contains Hangman game project implementation
+Implemented Neural network from scratch without using Pytorch/tensorflow to identify handwritten digits using numpy and python
